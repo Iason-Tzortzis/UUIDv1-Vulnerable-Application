@@ -1,0 +1,12 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+      - "8001:8001"
+    environment:
+      - PORT=${PORT1}
+      - PORT=${PORT2}
+      - AUTH_TOKEN=${AUTH_TOKEN}
+    stdin_open: true # Keep STDIN open for `docker exec`
+    tty: true # Allocate a pseudo-TTY
